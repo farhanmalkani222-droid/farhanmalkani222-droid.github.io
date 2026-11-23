@@ -7,257 +7,319 @@
 <meta property="og:description" content="Software developer in Mumbai. Business software, accounting automation, WhatsApp bots and websites.">
 <title>Farhan Malkani</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Farhan Malkani, software developer in Mumbai. Business software, accounting automation, WhatsApp bots and websites.">
+<meta name="description" content="Farhan Malkani, software developer in Mumbai. Business software that takes the typing out of work: order systems, Tally automation, invoice reading, WhatsApp bots and websites.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
 <style>
-/* layout: a sticky identity column (name, line, contents, contact) beside a reading column of ledger-style entries:
-   date and kind in a mono margin, the work in prose. Portfolio v4, 23-11-2026. */
+/* layout: a graph-paper page (the engineer's ruled ground) under one idea - messy business input in, clean records out.
+   Hero = name + a live demo of a WhatsApp order turning into an order, a mill PO and a Tally entry.
+   Then case studies (problem / built / result), client work, how I work (a real 5-step sequence), experience, toolbox, contact.
+   Portfolio v8, 23-11-2026. */
 :root{
-  --bg:oklch(98.4% .004 240);
+  --bg:oklch(99.2% .003 230);
+  --bg-2:oklch(97.2% .009 225);
   --surface:oklch(100% 0 0);
-  --surface-2:oklch(95.8% .007 240);
-  --ink:oklch(21% .022 250);
-  --ink-2:oklch(37% .02 250);
-  --muted:oklch(52% .016 250);
-  --rule:oklch(90% .009 245);
-  --accent:oklch(47% .085 205);
-  --accent-soft:oklch(47% .085 205 / .1);
-  --panel:oklch(19% .022 245);
-  --panel-2:oklch(24% .024 245);
-  --panel-ink:oklch(95% .006 240);
-  --panel-muted:oklch(70% .02 240);
-  --panel-rule:oklch(31% .022 245);
-  --ok:oklch(62% .13 155);
-  --shadow:0 24px 48px -28px oklch(21% .022 250 / .28);
+  --ink:oklch(20% .03 255);
+  --ink-2:oklch(38% .03 250);
+  --muted:oklch(54% .025 245);
+  --rule:oklch(91.5% .012 235);
+  --grid:oklch(92% .015 225 / .55);
+  --accent:oklch(58% .13 218);
+  --accent-2:oklch(52% .17 252);
+  --accent-ink:oklch(100% 0 0);
+  --accent-soft:oklch(62% .13 215 / .1);
+  --hl:oklch(88% .09 200 / .55);
+  --glow-1:oklch(88% .08 205 / .6);
+  --glow-2:oklch(86% .07 250 / .45);
+  --ok:oklch(62% .15 155);
+  --ok-soft:oklch(62% .15 155 / .12);
+  --shadow:0 1px 2px oklch(20% .03 255 / .06),0 18px 40px -22px oklch(30% .06 240 / .28);
+  --shadow-lg:0 2px 4px oklch(20% .03 255 / .05),0 40px 80px -40px oklch(35% .1 235 / .4);
 
-  --font-display:"Instrument Serif",ui-serif,Georgia,"Times New Roman",serif;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,"Segoe UI",system-ui,sans-serif;
   --font-body:"Geist",ui-sans-serif,"Segoe UI",system-ui,sans-serif;
-  --font-mono:"Geist Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+  --font-mono:"Geist Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
 
-  --fs-xs:.75rem;--fs-sm:.875rem;--fs-md:1rem;--fs-lg:1.125rem;--fs-xl:1.3125rem;
-  --fs-2xl:clamp(1.5rem,1vw + 1.15rem,1.875rem);
-  --fs-name:clamp(3rem,3.4vw + 1.6rem,4.75rem);
+  --fs-xs:.75rem;--fs-sm:.875rem;--fs-md:1rem;--fs-lg:1.125rem;--fs-xl:1.375rem;
+  --fs-h3:clamp(1.5rem,1.2vw + 1.1rem,2rem);
+  --fs-h2:clamp(2.1rem,3vw + 1rem,3.4rem);
+  --fs-name:clamp(3.2rem,6.2vw + .6rem,6.6rem);
   --ease:cubic-bezier(.16,1,.3,1);
-  --radius:18px;--radius-sm:10px;
+  --r:20px;--r-sm:12px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:oklch(15.5% .018 245);--surface:oklch(19% .02 245);--surface-2:oklch(23% .021 245);
-  --ink:oklch(95.5% .006 240);--ink-2:oklch(84% .01 240);--muted:oklch(68% .016 240);--rule:oklch(28% .02 245);
-  --accent:oklch(79% .095 195);--accent-soft:oklch(79% .095 195 / .12);
-  --panel:oklch(12.5% .016 245);--panel-2:oklch(18% .02 245);--panel-ink:oklch(95% .006 240);--panel-muted:oklch(68% .018 240);--panel-rule:oklch(26% .02 245);
-  --ok:oklch(74% .14 155);--shadow:0 24px 48px -30px oklch(0% 0 0 / .7);
+  --bg:oklch(14% .032 258);--bg-2:oklch(17% .036 255);--surface:oklch(18.5% .04 254);
+  --ink:oklch(96.5% .012 215);--ink-2:oklch(84% .025 222);--muted:oklch(68% .035 230);--rule:oklch(28% .045 248);
+  --grid:oklch(30% .045 245 / .45);
+  --accent:oklch(84% .14 200);--accent-2:oklch(72% .15 240);--accent-ink:oklch(15% .03 255);--accent-soft:oklch(84% .14 200 / .12);
+  --hl:oklch(84% .14 200 / .2);--glow-1:oklch(84% .14 200 / .14);--glow-2:oklch(72% .15 240 / .14);
+  --ok:oklch(80% .16 160);--ok-soft:oklch(80% .16 160 / .14);
+  --shadow:0 1px 2px oklch(0% 0 0 / .3),0 18px 40px -22px oklch(0% 0 0 / .7);--shadow-lg:0 40px 80px -40px oklch(0% 0 0 / .8);
   color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:oklch(15.5% .018 245);--surface:oklch(19% .02 245);--surface-2:oklch(23% .021 245);
-  --ink:oklch(95.5% .006 240);--ink-2:oklch(84% .01 240);--muted:oklch(68% .016 240);--rule:oklch(28% .02 245);
-  --accent:oklch(79% .095 195);--accent-soft:oklch(79% .095 195 / .12);
-  --panel:oklch(12.5% .016 245);--panel-2:oklch(18% .02 245);--panel-ink:oklch(95% .006 240);--panel-muted:oklch(68% .018 240);--panel-rule:oklch(26% .02 245);
-  --ok:oklch(74% .14 155);--shadow:0 24px 48px -30px oklch(0% 0 0 / .7);
+  --bg:oklch(14% .032 258);--bg-2:oklch(17% .036 255);--surface:oklch(18.5% .04 254);
+  --ink:oklch(96.5% .012 215);--ink-2:oklch(84% .025 222);--muted:oklch(68% .035 230);--rule:oklch(28% .045 248);
+  --grid:oklch(30% .045 245 / .45);
+  --accent:oklch(84% .14 200);--accent-2:oklch(72% .15 240);--accent-ink:oklch(15% .03 255);--accent-soft:oklch(84% .14 200 / .12);
+  --hl:oklch(84% .14 200 / .2);--glow-1:oklch(84% .14 200 / .14);--glow-2:oklch(72% .15 240 / .14);
+  --ok:oklch(80% .16 160);--ok-soft:oklch(80% .16 160 / .14);
+  --shadow:0 1px 2px oklch(0% 0 0 / .3),0 18px 40px -22px oklch(0% 0 0 / .7);--shadow-lg:0 40px 80px -40px oklch(0% 0 0 / .8);
   color-scheme:dark}
 
 *,*::before,*::after{box-sizing:border-box}
 html,body{overflow-x:clip}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-md)/1.65 var(--font-body);-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-::selection{background:var(--accent-soft);color:var(--ink)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+::selection{background:var(--hl);color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-family:var(--font-display);font-weight:700;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
 p{margin:0;text-wrap:pretty}
-ul,ol{margin:0;padding:0;list-style:none}
+ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .num{font-variant-numeric:tabular-nums}
-.mono{font-family:var(--font-mono)}
-.label{font:500 var(--fs-xs)/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.wrap{max-width:1200px;margin-inline:auto;
+  padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.eyebrow{font:500 var(--fs-xs)/1.4 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.grad{background:linear-gradient(100deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-.page{max-width:1240px;margin-inline:auto;
-  padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));
-  display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.3fr);gap:clamp(48px,6vw,104px)}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in oklab,var(--bg) 82%,transparent);
+  backdrop-filter:saturate(1.5) blur(16px);-webkit-backdrop-filter:saturate(1.5) blur(16px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--rule)}
+.nav .wrap{display:flex;align-items:center;gap:28px;min-height:64px}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;font:700 var(--fs-md)/1 var(--font-display);letter-spacing:-.02em}
+.mark i{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 .82rem/1 var(--font-display);font-style:normal;color:var(--accent-ink);
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 16px -6px var(--accent)}
+.nav a.l{font-size:var(--fs-sm);color:var(--ink-2);text-decoration:none;position:relative;padding-block:6px}
+.nav a.l::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a.l:hover{color:var(--ink)}
+.nav a.l:hover::after{transform:scaleX(1)}
 
-/* identity column */
-.side{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;min-height:100dvh;
-  padding-block:clamp(56px,9vh,96px) 40px;display:flex;flex-direction:column;gap:36px}
-.side h1{font:400 var(--fs-name)/.98 var(--font-display);letter-spacing:-.015em}
-.role{margin-top:14px;font-size:var(--fs-xl);font-weight:500;letter-spacing:-.01em;color:var(--ink)}
-.pitch{margin-top:14px;max-width:38ch;color:var(--ink-2);font-size:var(--fs-lg)}
-.pitch em{font:italic 400 1.2em/1 var(--font-display);color:var(--ink)}
-.status{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:7px 14px 7px 12px;border:1px solid var(--rule);
-  border-radius:999px;font-size:var(--fs-sm);color:var(--ink-2);background:var(--surface)}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in oklab,var(--ok) 22%,transparent)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid transparent;
+  font:600 var(--fs-sm)/1 var(--font-body);text-decoration:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s,background-color .25s,border-color .25s}
+.btn.primary{color:var(--accent-ink);background:linear-gradient(100deg,var(--accent),var(--accent-2));box-shadow:0 10px 24px -12px var(--accent-2)}
+.btn.primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px -12px var(--accent-2)}
+.btn.ghost{background:var(--surface);border-color:var(--rule);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn:active{transform:scale(.98)}
+.btn.sm{min-height:40px;padding:0 16px;font-size:var(--fs-xs)}
+.btn svg{width:16px;height:16px;flex:none}
 
-.toc{display:grid;gap:4px}
-.toc a{display:flex;align-items:center;gap:14px;padding-block:7px;text-decoration:none;
-  font:500 var(--fs-xs)/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:max-content}
-.toc a::before{content:"";width:28px;height:1px;background:currentColor;transition:width .45s var(--ease),background-color .3s}
-.toc a:hover,.toc a.on{color:var(--ink)}
-.toc a:hover::before,.toc a.on::before{width:56px;background:var(--accent)}
+/* hero */
+.hero{position:relative;padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,112px);isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(48rem 30rem at 12% 0%,var(--glow-1),transparent 65%),radial-gradient(42rem 30rem at 95% 25%,var(--glow-2),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(70rem 40rem at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(70rem 40rem at 50% 30%,#000 30%,transparent 75%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:clamp(40px,5vw,72px);align-items:center}
+.avail{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--rule);
+  font-size:var(--fs-sm);color:var(--ink-2);box-shadow:var(--shadow)}
+.pulse{position:relative;width:9px;height:9px;border-radius:50%;background:var(--ok)}
+.pulse::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--ok);opacity:0;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.4);opacity:.7}100%{transform:scale(1.3);opacity:0}}
+.hero h1{font-size:var(--fs-name);margin-top:22px;letter-spacing:-.045em;line-height:.95}
+.hero .lede{margin-top:22px;font:600 clamp(1.3rem,1.2vw + 1rem,1.7rem)/1.3 var(--font-display);letter-spacing:-.02em;max-width:24ch}
+.hero .sub{margin-top:16px;color:var(--ink-2);font-size:var(--fs-lg);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;font:500 var(--fs-xs)/1.5 var(--font-mono);letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.facts b{color:var(--ink);font-weight:500}
 
-.reach{margin-top:auto;display:grid;gap:10px}
-.mailrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.mail{font-size:var(--fs-md);font-weight:500;user-select:all;word-break:break-all}
-.copy{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);
-  font:500 var(--fs-xs)/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;
-  transition:border-color .25s,transform .15s}
-.copy:hover{border-color:var(--accent)}
-.copy:active{transform:scale(.97)}
-.copied{min-height:1.2em;font-size:var(--fs-xs);color:var(--muted)}
-
-/* entrance, once */
 @media (prefers-reduced-motion:no-preference){
-  .enter{animation:rise .9s var(--ease) both}
-  .enter:nth-child(2){animation-delay:.08s}.enter:nth-child(3){animation-delay:.16s}.enter:nth-child(4){animation-delay:.24s}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .rise{animation:rise .9s var(--ease) both}
+  .rise.d1{animation-delay:.06s}.rise.d2{animation-delay:.12s}.rise.d3{animation-delay:.18s}.rise.d4{animation-delay:.24s}.rise.d5{animation-delay:.32s}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 }
 
-/* reading column */
-.main{padding-block:clamp(56px,9vh,96px) 64px;display:grid;gap:clamp(88px,11vw,136px);min-width:0}
-.sec{display:grid;gap:28px;min-width:0}
-.sec > h2{display:flex;align-items:center;gap:16px;font:500 var(--fs-xs)/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
-.sec > h2::after{content:"";flex:1;height:1px;background:var(--rule)}
-
-.lead{font-size:var(--fs-2xl);line-height:1.35;letter-spacing:-.015em;color:var(--ink);font-weight:450}
-.lead em{font:italic 400 1.12em/1 var(--font-display)}
-.prose{display:grid;gap:14px;color:var(--ink-2);max-width:62ch}
-
-.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
-.fig{padding:22px 20px 22px 0;border-bottom:1px solid var(--rule);display:grid;gap:6px;min-width:0}
-.fig:nth-child(odd){border-right:1px solid var(--rule)}
-.fig:nth-child(even){padding-left:22px}
-.fig b{font:400 clamp(2.25rem,2vw + 1.5rem,3rem)/1 var(--font-display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.fig span{color:var(--muted);font-size:var(--fs-sm)}
-
-/* experience */
-.jobs{display:grid;gap:12px}
-.job{display:grid;grid-template-columns:136px minmax(0,1fr);gap:24px;padding:24px;margin-inline:-24px;border-radius:var(--radius);
-  transition:background-color .35s var(--ease)}
-.job:hover{background:var(--surface-2)}
-.when{font:500 var(--fs-xs)/1.6 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.job h3{font-size:var(--fs-lg);letter-spacing:-.01em;line-height:1.35}
-.job h3 .at{display:block;font-weight:400;color:var(--muted);font-size:var(--fs-md);margin-top:2px}
-.job p{color:var(--ink-2);margin-top:10px}
-.points{display:grid;gap:8px;margin-top:14px;color:var(--ink-2)}
-.points li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px}
-.points li::before{content:"";width:6px;height:6px;margin-top:.62em;border-radius:50%;background:var(--accent)}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-.tags li{font:500 .72rem/1 var(--font-mono);letter-spacing:.02em;padding:7px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
-
-/* featured project */
-.feature{background:var(--surface);border:1px solid var(--rule);border-radius:calc(var(--radius) + 6px);overflow:hidden;box-shadow:var(--shadow)}
-.feature-head{padding:30px 30px 0;display:grid;gap:10px}
-.feature-head h3{font:400 clamp(1.9rem,1.6vw + 1.3rem,2.6rem)/1.08 var(--font-display);letter-spacing:-.01em}
-.feature-head p{color:var(--ink-2);max-width:60ch}
-.feature-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;padding:28px 30px 30px}
-
-.run{background:var(--panel);color:var(--panel-ink);border-radius:var(--radius);padding:18px 18px 8px;display:grid;gap:6px;min-width:0;align-self:start}
-.run-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--panel-rule)}
-.run-top .label{color:var(--panel-muted)}
-.pause{min-height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--panel-rule);background:transparent;color:var(--panel-ink);
+/* the demo: message -> order -> PO -> Tally */
+.demo{background:var(--surface);border:1px solid var(--rule);border-radius:calc(var(--r) + 6px);box-shadow:var(--shadow-lg);overflow:hidden;min-width:0}
+.demo-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--rule);background:var(--bg-2)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--rule)}
+.demo-top .t{font:500 .72rem/1 var(--font-mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.pause{min-height:30px;padding:0 12px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);
   font:500 .68rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
-.pause:hover{border-color:var(--panel-muted)}
-.steps{display:grid}
-.step{display:grid;grid-template-columns:44px minmax(0,1fr) 22px;gap:12px;align-items:start;padding:11px 0;border-bottom:1px solid var(--panel-rule);
-  opacity:.42;transition:opacity .5s var(--ease)}
+.pause:hover{border-color:var(--accent);color:var(--ink)}
+.demo-body{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:0}
+.msg{padding:18px;border-right:1px solid var(--rule);background:
+  radial-gradient(circle at 1px 1px,var(--grid) 1px,transparent 0) 0 0/14px 14px}
+.who{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--muted);margin-bottom:10px}
+.who i{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,oklch(75% .13 150),oklch(62% .15 165));display:grid;place-items:center;
+  font:700 .6rem/1 var(--font-body);font-style:normal;color:#fff}
+.bubble{background:var(--surface);border:1px solid var(--rule);border-radius:4px 16px 16px 16px;padding:12px 14px;box-shadow:var(--shadow);
+  font:400 .82rem/1.55 var(--font-mono);color:var(--ink)}
+.bubble span{display:block;border-radius:5px;padding:0 4px;margin-inline:-4px;transition:background-color .35s}
+.bubble span.on{background:var(--hl)}
+.bubble .time{display:block;text-align:right;font-size:.66rem;color:var(--muted);margin-top:4px}
+.out{padding:18px;display:grid;gap:14px;align-content:start;min-width:0}
+.out .h{font:500 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+.tbl{width:100%;border-collapse:collapse;font-size:.8rem}
+.tbl th{font:500 .66rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 6px 8px;border-bottom:1px solid var(--rule)}
+.tbl td{padding:7px 6px;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl th:nth-child(n+2),.tbl td:nth-child(n+2){text-align:right}
+.tbl tr.row{transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.tbl tr.row.hide{opacity:0;transform:translateX(10px)}
+.tbl tfoot td{border-bottom:0;font-weight:600;padding-top:9px}
+.chips{display:grid;gap:8px}
+.chip{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;border:1px solid var(--rule);font-size:.8rem;color:var(--muted);
+  background:var(--bg-2);transition:all .45s var(--ease)}
+.chip .ck{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--rule);display:grid;place-items:center;flex:none;transition:all .4s}
+.chip .ck svg{width:10px;height:10px;stroke:#fff;stroke-width:2.6;fill:none;opacity:0;transition:opacity .3s}
+.chip b{font-weight:600;color:var(--ink-2)}
+.chip.on{background:var(--ok-soft);border-color:color-mix(in oklab,var(--ok) 35%,transparent);color:var(--ink-2)}
+.chip.on .ck{background:var(--ok);border-color:var(--ok)}
+.chip.on .ck svg{opacity:1}
+.chip.on b{color:var(--ink)}
+
+/* sections */
+.sec{padding-block:clamp(80px,10vw,136px)}
+.sec-head{display:grid;gap:16px;max-width:760px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{font-size:var(--fs-h2)}
+.sec-head p{color:var(--ink-2);font-size:var(--fs-lg);max-width:58ch}
+.sec-head .eyebrow{color:var(--accent);font-size:var(--fs-xs)}
+[hidden]{display:none!important}
+.band{background:var(--bg-2);border-block:1px solid var(--rule)}
+
+/* numbers */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.stat{padding:30px 24px 30px 0;display:grid;gap:8px;border-left:1px solid var(--rule);padding-left:24px}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font:700 clamp(2.4rem,2.6vw + 1rem,3.6rem)/1 var(--font-display);letter-spacing:-.04em}
+.stat span{color:var(--muted);font-size:var(--fs-sm);max-width:24ch}
+
+/* case studies */
+.cases{display:grid;gap:clamp(56px,7vw,96px)}
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.case.flip .case-text{order:2}
+.case-text{display:grid;gap:18px;min-width:0}
+.case-text h3{font-size:var(--fs-h3)}
+.case-text .one{font-size:var(--fs-lg);color:var(--ink-2)}
+.pbr{display:grid;gap:0;border-top:1px solid var(--rule)}
+.pbr div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.pbr dt{font:500 .7rem/1.7 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pbr dd{color:var(--ink-2);font-size:var(--fs-sm)}
+.pbr dd b{color:var(--ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font:500 .72rem/1 var(--font-mono);padding:7px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);border:1px solid color-mix(in oklab,var(--accent) 22%,transparent)}
+.visual{position:relative;border-radius:calc(var(--r) + 4px);padding:clamp(18px,2.4vw,28px);min-width:0;
+  background:linear-gradient(160deg,color-mix(in oklab,var(--accent) 9%,var(--bg-2)),color-mix(in oklab,var(--accent-2) 7%,var(--bg-2)));border:1px solid var(--rule)}
+.visual .frame{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r-sm);box-shadow:var(--shadow-lg);overflow:hidden}
+.visual .frame img{width:100%;transition:transform .8s var(--ease)}
+.visual:hover .frame img{transform:scale(1.025)}
+
+/* pipeline card (case 1) */
+.run{padding:16px 18px 6px;display:grid}
+.run .h{display:flex;justify-content:space-between;font:500 .7rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.step{display:grid;grid-template-columns:48px minmax(0,1fr) 22px;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:start}
 .step:last-child{border-bottom:0}
-.step .t{font:500 .72rem/1.5 var(--font-mono);color:var(--panel-muted);padding-top:2px}
-.step b{display:block;font-weight:500;font-size:var(--fs-sm)}
-.step small{display:block;font:400 .74rem/1.45 var(--font-mono);color:var(--panel-muted);margin-top:2px}
-.tick{width:20px;height:20px;border-radius:50%;border:1px solid var(--panel-rule);display:grid;place-items:center;margin-top:1px;
-  transition:background-color .4s,border-color .4s}
-.tick svg{width:11px;height:11px;stroke:var(--panel);stroke-width:2.4;fill:none;opacity:0;transition:opacity .3s}
-.step.done{opacity:1}
-.step.done .tick{background:var(--ok);border-color:var(--ok)}
-.step.done .tick svg{opacity:1}
-.step.now{opacity:1}
-.step.now .tick{border-color:var(--panel-muted);animation:pulse 1.1s ease-in-out infinite}
-@keyframes pulse{50%{border-color:var(--ok)}}
+.step .tm{font:500 .72rem/1.5 var(--font-mono);color:var(--muted);padding-top:2px}
+.step b{display:block;font-weight:600;font-size:var(--fs-sm)}
+.step small{display:block;font:400 .74rem/1.45 var(--font-mono);color:var(--muted);margin-top:2px}
+.tick{width:20px;height:20px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin-top:1px;box-shadow:0 0 0 4px var(--ok-soft)}
+.tick svg{width:11px;height:11px;stroke:#fff;stroke-width:2.6;fill:none}
 
-.does{display:grid;align-content:start}
-.does div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:14px;padding:13px 0;border-bottom:1px solid var(--rule)}
-.does div:first-child{padding-top:0}
-.does div:last-child{border-bottom:0}
-.does dt{font:500 var(--fs-xs)/1.6 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
-.does dd{margin:0;color:var(--ink-2);font-size:var(--fs-sm)}
-.feature-foot{padding:0 30px 28px}
-
-/* project cards */
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.card{display:flex;flex-direction:column;gap:14px;padding:14px 14px 20px;border:1px solid var(--rule);border-radius:var(--radius);background:var(--surface);
-  text-decoration:none;min-width:0;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
-.card:hover{transform:translateY(-2px);border-color:color-mix(in oklab,var(--accent) 45%,var(--rule));box-shadow:var(--shadow)}
-.shot{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/10;max-width:100%;background:var(--surface-2);border:1px solid var(--rule)}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s var(--ease)}
-.card:hover .shot img{transform:scale(1.03)}
-.card .txt{padding-inline:6px;display:grid;gap:6px}
-.card .kind{font:500 .7rem/1.3 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.card h3{font-size:var(--fs-lg);letter-spacing:-.01em;line-height:1.3;display:flex;align-items:baseline;gap:8px}
-.card p{color:var(--ink-2);font-size:var(--fs-sm)}
-.card .tags{margin-top:6px}
-.arrow{display:inline-block;color:var(--accent);transition:transform .35s var(--ease)}
-.card:hover .arrow{transform:translate(3px,-3px)}
-.card .go{font:500 .74rem/1 var(--font-mono);letter-spacing:.04em;color:var(--accent);margin-top:4px}
-
-/* a bill as the engine reads it */
-.reader{aspect-ratio:16/10;max-width:100%;border-radius:var(--radius-sm);background:var(--panel);color:var(--panel-ink);padding:14px 16px;
-  font:400 .72rem/1.65 var(--font-mono);display:grid;align-content:start;gap:2px;overflow:hidden}
-.reader .r{display:grid;grid-template-columns:1.2fr .8fr .7fr .5fr .8fr;gap:6px;white-space:nowrap}
+/* invoice reader (case 2) */
+.reader{padding:16px 18px;font:400 .76rem/1.7 var(--font-mono)}
+.reader .r{display:grid;grid-template-columns:1.1fr .8fr .6fr .6fr .8fr;gap:8px;white-space:nowrap}
 .reader .r span:nth-child(n+3){text-align:right}
-.reader .hd{color:var(--panel-muted);border-bottom:1px solid var(--panel-rule);padding-bottom:4px;margin-bottom:2px}
-.reader .tot{border-top:1px solid var(--panel-rule);margin-top:4px;padding-top:4px;font-weight:500}
-.reader .ok{margin-top:8px;color:var(--ok);display:flex;gap:8px;align-items:center}
-.reader .ok::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.reader .hd{color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:4px;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.reader .tot{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px;font-weight:600}
+.verdict{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 12px;border-radius:10px;background:var(--ok-soft);color:var(--ink);font-family:var(--font-body);font-size:.8rem}
+.verdict .tick{flex:none}
+
+/* client work */
+.work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.wcard{display:flex;flex-direction:column;gap:18px;padding:16px 16px 22px;background:var(--surface);border:1px solid var(--rule);border-radius:calc(var(--r) + 2px);
+  text-decoration:none;min-width:0;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.wcard:hover{transform:translateY(-3px);border-color:color-mix(in oklab,var(--accent) 45%,var(--rule));box-shadow:var(--shadow-lg)}
+.wcard .shot{border-radius:var(--r-sm);overflow:hidden;aspect-ratio:16/10;max-width:100%;background:var(--bg-2);border:1px solid var(--rule)}
+.wcard .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease)}
+.wcard:hover .shot img{transform:scale(1.03)}
+.wcard .tx{padding-inline:6px;display:grid;gap:8px}
+.wcard .k{font:500 .7rem/1.3 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.wcard h3{font-size:var(--fs-xl);letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.wcard p{color:var(--ink-2);font-size:var(--fs-sm)}
+.arrow{color:var(--accent);transition:transform .35s var(--ease);display:inline-block}
+.wcard:hover .arrow{transform:translate(3px,-3px)}
 
 /* bots */
-.bots{display:grid;border-top:1px solid var(--rule)}
-.bot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:20px 0;border-bottom:1px solid var(--rule)}
-.bot h3{font-size:var(--fs-md);letter-spacing:-.005em}
-.bot p{grid-column:1;color:var(--ink-2);font-size:var(--fs-sm)}
-.live{grid-row:1/span 2;grid-column:2;align-self:center;display:inline-flex;align-items:center;gap:8px;font:500 .7rem/1 var(--font-mono);
-  letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.bot{padding:22px;border-radius:var(--r);background:var(--surface);border:1px solid var(--rule);display:grid;gap:10px;align-content:start}
+.bot .top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.bot h3{font-size:var(--fs-lg);letter-spacing:-.015em}
+.live{display:inline-flex;align-items:center;gap:7px;font:500 .66rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ok)}
+.live .pulse{width:7px;height:7px}
+.bot p{color:var(--ink-2);font-size:var(--fs-sm)}
 
-/* skills */
-.skills{display:grid}
-.skills div{display:grid;grid-template-columns:136px minmax(0,1fr);gap:24px;padding:16px 0;border-bottom:1px solid var(--rule)}
-.skills div:first-child{border-top:1px solid var(--rule)}
-.skills dt{font:500 var(--fs-xs)/1.6 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
-.skills dd{margin:0;color:var(--ink-2)}
+/* process */
+.steps5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:s}
+.s5{padding:26px 22px 26px 0;border-top:2px solid var(--rule);position:relative;display:grid;gap:10px;align-content:start;min-width:0}
+.s5 + .s5{padding-left:22px}
+.s5::before{content:"";position:absolute;top:-2px;left:0;width:44px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.s5 + .s5::before{left:22px}
+.s5 .n{font:500 .72rem/1 var(--font-mono);color:var(--accent);letter-spacing:.06em}
+.s5 h3{font-size:var(--fs-lg);letter-spacing:-.015em;line-height:1.2}
+.s5 p{color:var(--ink-2);font-size:var(--fs-sm)}
+
+/* experience */
+.xp{display:grid;border-top:1px solid var(--rule)}
+.job{display:grid;grid-template-columns:170px minmax(0,1fr);gap:32px;padding:30px 0;border-bottom:1px solid var(--rule)}
+.when{font:500 var(--fs-xs)/1.7 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.job h3{font-size:var(--fs-xl);letter-spacing:-.02em;line-height:1.2}
+.job .at{display:block;font:400 var(--fs-md)/1.5 var(--font-body);letter-spacing:0;color:var(--muted);margin-top:4px}
+.job p{color:var(--ink-2);margin-top:12px;max-width:66ch}
+.pts{display:grid;gap:8px;margin-top:14px;color:var(--ink-2);max-width:70ch}
+.pts li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px}
+.pts li::before{content:"";width:6px;height:6px;margin-top:.62em;border-radius:2px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+.job .tags{margin-top:16px}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.tool{padding:22px 20px;border-radius:var(--r);border:1px solid var(--rule);background:var(--surface);display:grid;gap:12px;align-content:start}
+.tool h3{font:500 .72rem/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.tool ul{display:grid;gap:6px;font-size:var(--fs-sm);color:var(--ink-2)}
 
 /* contact */
-.ask{font:400 clamp(2.1rem,2.4vw + 1.2rem,3.25rem)/1.08 var(--font-display);letter-spacing:-.01em}
-.ask em{font-style:italic;color:var(--accent)}
-.contact .mailrow .mail{font-size:var(--fs-xl)}
-.foot{border-top:1px solid var(--rule);padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:var(--fs-xs);color:var(--muted)}
+.contact{position:relative;overflow:hidden;isolation:isolate;border-radius:calc(var(--r) + 12px);padding:clamp(36px,6vw,80px);border:1px solid var(--rule);
+  background:linear-gradient(140deg,color-mix(in oklab,var(--accent) 12%,var(--surface)),color-mix(in oklab,var(--accent-2) 10%,var(--surface)))}
+.contact::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:44px 44px;-webkit-mask-image:radial-gradient(40rem 24rem at 100% 100%,#000 10%,transparent 70%);mask-image:radial-gradient(40rem 24rem at 100% 100%,#000 10%,transparent 70%)}
+.contact h2{font-size:clamp(2.4rem,4.4vw + .8rem,4.6rem);max-width:14ch;letter-spacing:-.045em}
+.contact p{margin-top:18px;color:var(--ink-2);font-size:var(--fs-lg);max-width:48ch}
+.mailbox{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:30px}
+.mail{font:600 clamp(1.15rem,1vw + .9rem,1.5rem)/1.2 var(--font-body);user-select:all;word-break:break-all}
+.copied{min-height:1.4em;margin-top:10px;font-size:var(--fs-sm);color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:36px 48px;font-size:var(--fs-xs);color:var(--muted)}
 
-/* phone bar (narrow screens only) */
-.mbar{display:none}
-
-@media (max-width:64rem){
-  .page{grid-template-columns:minmax(0,1fr);gap:0}
-  .side{position:static;min-height:0;padding-block:40px 8px;gap:24px}
-  .toc,.side .reach{display:none}
-  .main{padding-block:56px 48px;gap:88px}
-  .mbar{display:block;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in oklab,var(--bg) 88%,transparent);
-    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
-  .mbar nav{max-width:1240px;margin-inline:auto;display:flex;align-items:center;gap:20px;overflow-x:auto;scrollbar-width:none;
-    padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
-  .mbar nav::-webkit-scrollbar{display:none}
-  .mbar a{flex:none;display:inline-flex;align-items:center;min-height:48px;text-decoration:none;font:500 var(--fs-xs)/1 var(--font-mono);
-    letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  .mbar a.name{color:var(--ink);font:400 1.15rem/1 var(--font-display);letter-spacing:0;text-transform:none;margin-right:auto}
+@media (max-width:72rem){
+  .tools{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps5{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:20px}
+  .s5:nth-child(4){padding-left:0}.s5:nth-child(4)::before{left:0}
+}
+@media (max-width:60rem){
+  .nav a.l{display:none}
+  .hero .wrap,.case{grid-template-columns:minmax(0,1fr)}
+  .case.flip .case-text{order:0}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat{padding-block:22px}
+  .bots{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:46rem){
-  .page{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  .mbar nav{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-  .feature-body,.cards{grid-template-columns:minmax(0,1fr)}
-  .feature-head{padding:24px 20px 0}.feature-body{padding:22px 20px 24px}.feature-foot{padding:0 20px 22px}
-  .job,.skills div{grid-template-columns:minmax(0,1fr);gap:6px}
-  .job{padding:18px 16px;margin-inline:-16px}
-  .figs{grid-template-columns:minmax(0,1fr)}
-  .fig:nth-child(odd){border-right:0}.fig:nth-child(even){padding-left:0}
-  .does div{grid-template-columns:minmax(0,1fr);gap:4px}
-  .reader{font-size:.64rem;padding:12px}
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .demo-body{grid-template-columns:minmax(0,1fr)}
+  .msg{border-right:0;border-bottom:1px solid var(--rule)}
+  .work,.tools,.steps5{grid-template-columns:minmax(0,1fr)}
+  .s5,.s5 + .s5{padding-left:0}.s5 + .s5::before{left:0}
+  .job{grid-template-columns:minmax(0,1fr);gap:8px}
+  .pbr div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .stats{grid-template-columns:minmax(0,1fr)}
+  .stat{border-left:0;padding-left:0;border-top:1px solid var(--rule)}
+  .reader{font-size:.66rem}
+  .cta .btn{flex:1 1 100%;justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
@@ -266,89 +328,253 @@ a{color:inherit}
 <body>
 
 
-<header class="mbar">
-  <nav aria-label="Sections">
-    <a class="name" href="#top">Farhan Malkani</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="#top"><i aria-hidden="true">FM</i>Farhan Malkani</a>
+    <a class="l" href="#work">Work</a>
+    <a class="l" href="#process">How I work</a>
+    <a class="l" href="#experience">Experience</a>
+    <a class="btn primary sm" href="#contact">Get in touch</a>
+  </div>
 </header>
 
-<div class="page" id="top">
-  <header class="side">
-    <div>
-      <p class="label enter">Software developer · Mumbai</p>
-      <h1 class="enter">Farhan Malkani</h1>
-      <p class="role enter">I build the software small businesses run on.</p>
-      <p class="pitch enter">Order systems, accounting automation, WhatsApp bots and websites, made to <em>take the typing</em> out of everyday work.</p>
-      <p class="status enter"><span class="dot" aria-hidden="true"></span>Open to internships, jobs and freelance work</p>
-    </div>
-    <nav class="toc" aria-label="Contents">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="reach">
-      <p class="label">Email</p>
-      <div class="mailrow"><span class="mail" id="mail-a">farhanmalkani222@gmail.com</span><button class="copy" type="button" id="copy-a" data-target="mail-a" data-out="out-a">Copy</button><a class="copy" href="Farhan_Malkani_Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none">Resume PDF</a></div>
-      <p class="copied" id="out-a" aria-live="polite"></p>
-    </div>
-  </header>
-
-  <main class="main">
-    <section class="sec" id="about">
-      <h2>About</h2>
-      <p class="lead">I'm an IT student in Mumbai who builds software that businesses use <em>every day</em>, and I keep it running after launch.</p>
-      <div class="prose">
-        <p>Most of my work replaces a job someone used to do by hand: typing bills into Tally, matching mill invoices to orders, chasing payments and follow-ups. I start by sitting with the person who does the job, copy how they do it, and test every change on real data before it goes live.</p>
-        <p>I build with modern AI coding tools and take ownership of everything that ships: the server, the backups, the tests and the fixes when something breaks.</p>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="avail rise"><span class="pulse" aria-hidden="true"></span>Open to internships, jobs and freelance work</p>
+        <h1 class="rise d1">Farhan Malkani</h1>
+        <p class="lede rise d2">I build software that takes the <span class="grad">typing</span> out of running a business.</p>
+        <p class="sub rise d3">Order systems, Tally automation, invoice reading, WhatsApp bots and websites. Built in Mumbai, used every day.</p>
+        <div class="cta rise d4">
+          <a class="btn primary" href="#work">See my work
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn ghost" href="https://github.com/farhanmalkani222-droid" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a>
+          <a class="btn ghost" href="Farhan_Malkani_Resume.pdf" target="_blank" rel="noopener" data-site-only>Resume PDF</a>
+        </div>
+        <p class="facts rise d5"><span><b>BSc IT</b> · Wilson College</span><span><b>Python</b> · Django</span><span><b>Mumbai</b>, India</span></p>
       </div>
-      <div class="figs">
-        <div class="fig"><b class="num">3,500+</b><span>automated tests behind the main system</span></div>
-        <div class="fig"><b class="num">400+</b><span>bills a week booked into Tally without typing</span></div>
-        <div class="fig"><b class="num">30+</b><span>mill invoice layouts read automatically</span></div>
-        <div class="fig"><b class="num">4</b><span>client websites and tools built</span></div>
-      </div>
-    </section>
 
-    <section class="sec" id="experience">
-      <h2>Experience</h2>
-      <ol class="jobs">
+      <div class="demo rise d3" aria-label="Demo data: a customer's WhatsApp paper order filled into an order, the mill's bill matched to it, and both bills booked in Tally">
+        <div class="demo-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="t">WhatsApp order → Tally, no retyping</span><button class="pause" type="button" id="pause" aria-pressed="false">Pause</button></div>
+        <div class="demo-body">
+          <div class="msg">
+            <p class="who"><i aria-hidden="true">SP</i>Shree Packaging · WhatsApp</p>
+            <p class="bubble" id="bubble">
+              <span>Need kraft paper rolls</span>
+              <span>23 inch × 3 rolls</span>
+              <span>27 inch × 2 rolls</span>
+              <span>36 inch × 4 rolls</span>
+              <span>42 inch × 3 rolls</span>
+              <span>Rate 35.50 per kg</span>
+              <span>Deliver to Vapi plant</span>
+              <em class="time">10:42</em>
+            </p>
+          </div>
+          <div class="out">
+            <p class="h"><span>Order · ready to check</span><span>demo data</span></p>
+            <table class="tbl" aria-label="The order the message became">
+              <thead><tr><th>Roll size</th><th>Rolls</th><th>Rate / kg</th></tr></thead>
+              <tbody>
+                <tr class="row"><td>23 inch</td><td>3</td><td>₹35.50</td></tr>
+                <tr class="row"><td>27 inch</td><td>2</td><td>₹35.50</td></tr>
+                <tr class="row"><td>36 inch</td><td>4</td><td>₹35.50</td></tr>
+                <tr class="row"><td>42 inch</td><td>3</td><td>₹35.50</td></tr>
+              </tbody>
+              <tfoot><tr><td>Total</td><td id="total">12</td><td></td></tr></tfoot>
+            </table>
+            <div class="chips">
+              <p class="chip on"><span class="ck" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span><span><b>Order filled in</b>, staff check and save</span></p>
+              <p class="chip on"><span class="ck" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span><span><b>Mill's bill read</b> and matched to the order</span></p>
+              <p class="chip on"><span class="ck" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span><span><b>Booked in Tally</b>, purchase and sales bills</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><b class="num grad">400+</b><span>bills a week booked into Tally without typing</span></div>
+        <div class="stat"><b class="num grad">30+</b><span>paper mills' invoice layouts read automatically</span></div>
+        <div class="stat"><b class="num grad">3,500+</b><span>automated tests behind the main system</span></div>
+        <div class="stat"><b class="num grad">4</b><span>client websites and tools built</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Software people use every working day.</h2>
+        <p>Most of it replaces a job someone did by hand. Each project below says what the problem was, what I built and what changed.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <div class="case-text">
+            <p class="eyebrow">Main project · in daily use</p>
+            <h3>The order-to-Tally system for a paper trader</h3>
+            <p class="one">One system takes an order from a customer's message to the mill, reads the mill's bill when it comes back, books both sides in Tally and tracks the payment.</p>
+            <dl class="pbr">
+              <div><dt>Problem</dt><dd>Orders arrived as WhatsApp messages, bills as PDFs from 30+ mills, and staff typed all of it into Tally by hand.</dd></div>
+              <div><dt>Built</dt><dd>A Django order system, mill POs sent as PDFs, an invoice reader, an office agent that books purchase and sales bills, and a due list by payment terms.</dd></div>
+              <div><dt>Result</dt><dd><b>400+ bills a week</b> now go into Tally without typing, used daily across two offices, with <b>3,500+ tests</b> run before every change.</dd></div>
+            </dl>
+            <ul class="tags"><li>Python</li><li>Django</li><li>TallyPrime XML</li><li>TDL</li><li>Linux</li></ul>
+          </div>
+          <div class="visual">
+            <div class="frame run" aria-label="One mill bill going through the system, demo data">
+              <p class="h"><span>One mill bill</span><span>demo data</span></p>
+              <div class="step"><span class="tm">09:31</span><span><b>Mail picked up</b><small>Invoice and reel list, 2 PDFs</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></div>
+              <div class="step"><span class="tm">09:31</span><span><b>Bill read</b><small>12 reels · 4 sizes · 10,181 kg</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></div>
+              <div class="step"><span class="tm">09:31</span><span><b>Totals checked</b><small>Reels add up to the printed total</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></div>
+              <div class="step"><span class="tm">09:32</span><span><b>Filled on the order</b><small>PO 105 · 4 of 4 sizes</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></div>
+              <div class="step"><span class="tm">09:33</span><span><b>Booked in Tally</b><small>Purchase and its sales bill</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case flip">
+          <div class="case-text">
+            <p class="eyebrow">Engine · Python</p>
+            <h3>An invoice reader that checks its own work</h3>
+            <p class="one">Every paper mill prints its bill differently. This engine reads them all and fills each bill onto the right order.</p>
+            <dl class="pbr">
+              <div><dt>Problem</dt><dd>One parser per mill broke quietly whenever a mill changed its layout, and bills were filled short without anyone seeing.</dd></div>
+              <div><dt>Built</dt><dd>One engine that reads by labels, columns and totals. A reading is used only when it adds up to the bill's printed total. Odd PDFs go to a local AI model on the firm's own server, and its answer must pass the same check.</dd></div>
+              <div><dt>Result</dt><dd>Before launch it re-read <b>every bill since June</b> and made <b>no wrong fill</b>. It now runs every 15 minutes on its own.</dd></div>
+            </dl>
+            <ul class="tags"><li>Python</li><li>PDF parsing</li><li>Tesseract OCR</li><li>Ollama</li><li>Gmail API</li></ul>
+          </div>
+          <div class="visual">
+            <div class="frame reader" aria-label="A mill bill as the engine reads it, demo data">
+              <div class="r hd"><span>Size</span><span>Grade</span><span>Reels</span><span>GSM</span><span>Kg</span></div>
+              <div class="r"><span>27.00"</span><span>22 BF</span><span>2</span><span>180</span><span>787</span></div>
+              <div class="r"><span>30.25"</span><span>22 BF</span><span>1</span><span>180</span><span>482</span></div>
+              <div class="r"><span>34.00"</span><span>20 BF</span><span>3</span><span>140</span><span>1,343</span></div>
+              <div class="r"><span>46.00"</span><span>18 BF</span><span>1</span><span>120</span><span>626</span></div>
+              <div class="r tot"><span>Total</span><span></span><span>7</span><span></span><span>3,238</span></div>
+              <p class="verdict"><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span>Matches the printed 3,238 kg, so it is filled on the order</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-text">
+            <p class="eyebrow">Feature · Django</p>
+            <h3>Collections that follow each party's terms</h3>
+            <p class="one">A due list that knows when each bill is really due, and a one-page statement of only that party's own bills.</p>
+            <dl class="pbr">
+              <div><dt>Problem</dt><dd>Payment follow-ups were done from memory and long Tally reports, so overdue bills were easy to miss.</dd></div>
+              <div><dt>Built</dt><dd>A due list read from Tally every two hours, with each party's own payment terms, and statements and payment advices ready to send.</dd></div>
+              <div><dt>Result</dt><dd>Staff see who owes what today, and send a clean statement instead of a ledger dump.</dd></div>
+            </dl>
+            <ul class="tags"><li>Django</li><li>Tally data</li><li>PDF</li></ul>
+          </div>
+          <div class="visual">
+            <div class="frame"><img src="img/demo_due_statement.jpg" alt="A payment-due statement listing bills past their payment day and bills not yet due, with demo data" width="820" height="548" loading="lazy"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="clients">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Client work</p>
+        <h2>Websites and tools for small businesses.</h2>
+        <p>From the first sketch to hosting and the changes after launch.</p>
+      </div>
+      <div class="work">
+        <a class="wcard" href="https://gocreativebyiqra.com" target="_blank" rel="noopener">
+          <div class="shot"><img src="img/gocreative.jpg" alt="Go Creative events page with a bookable surfing experience" width="1200" height="750" loading="lazy"></div>
+          <div class="tx"><p class="k">Website · live</p><h3>Go Creative <span class="arrow" aria-hidden="true">↗</span></h3>
+            <p>A craft-workshop studio. Every event the owner adds goes live with booking and payment.</p></div>
+        </a>
+        <article class="wcard">
+          <div class="shot"><img src="img/alarfan.jpg" alt="Al Arfan Global Exports home page" width="1200" height="750" loading="lazy"></div>
+          <div class="tx"><p class="k">Website · Django</p><h3>Al Arfan Global Exports</h3>
+            <p>An agri exporter to the Gulf. The site runs in ten languages, and the owner edits any text with one click.</p></div>
+        </article>
+        <article class="wcard">
+          <div class="shot"><img src="img/imshub.jpg" alt="IMS Hub turning a typed job order into hiring posters" width="1200" height="750" loading="lazy"></div>
+          <div class="tx"><p class="k">Tool · Flask and local AI</p><h3>IMS Hub</h3>
+            <p>For a recruitment agency. A typed job order comes back as ready hiring posters, with a searchable CV database behind it.</p></div>
+        </article>
+        <article class="wcard">
+          <div class="shot"><img src="img/dailykalonji.jpg" alt="Daily Kalonji landing page with the oil bottle" width="1200" height="750" loading="lazy"></div>
+          <div class="tx"><p class="k">Landing page</p><h3>Daily Kalonji</h3>
+            <p>A black seed oil brand's landing page that sends buyers to its existing store.</p></div>
+        </article>
+      </div>
+      <div class="bots">
+        <div class="bot"><div class="top"><h3>RozgarBot</h3><span class="live"><span class="pulse" aria-hidden="true"></span>Running</span></div>
+          <p>A WhatsApp job bot that sends job-seekers only the jobs they asked for, and goes quiet when a person replies.</p></div>
+        <div class="bot"><div class="top"><h3>Sales reminders</h3><span class="live"><span class="pulse" aria-hidden="true"></span>Running</span></div>
+          <p>Sends each salesperson the customers to call that morning, until Tally shows the month's target met.</p></div>
+        <div class="bot"><div class="top"><h3>Office assistant</h3><span class="live"><span class="pulse" aria-hidden="true"></span>Running</span></div>
+          <p>Runs on a local AI model on the firm's own server and sends the follow-ups agreed in meetings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How I work</p>
+        <h2>Start with the person, end with the numbers.</h2>
+        <p>The same five steps on every project, from a client's website to the firm's Tally books.</p>
+      </div>
+      <ol class="steps5">
+        <li class="s5"><span class="n">01</span><h3>Sit with the person doing it</h3><p>Watch the job done by hand, with the real files and messages.</p></li>
+        <li class="s5"><span class="n">02</span><h3>Copy their way of working</h3><p>The software follows their steps, so nobody has to learn a new routine.</p></li>
+        <li class="s5"><span class="n">03</span><h3>Build small, on real data</h3><p>One working piece first, tried on last month's actual records.</p></li>
+        <li class="s5"><span class="n">04</span><h3>Check it against their numbers</h3><p>Totals must match what they already trust before anything goes live.</p></li>
+        <li class="s5"><span class="n">05</span><h3>Keep it running</h3><p>Backups, tests and fixes after launch. I build with AI coding tools and own what ships.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec band" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Experience · Education</p>
+        <h2>Where I've worked and studied.</h2>
+      </div>
+      <ol class="xp">
         <li class="job">
           <p class="when">2026 — Now</p>
           <div>
-            <h3>Software Developer, in-house<span class="at">Kraft-paper trading firm, Mumbai</span></h3>
-            <p>I design, build and run the software the business works on, used every day by its staff across a Mumbai and a Gujarat office.</p>
-            <ul class="points">
-              <li>Built the order system: a customer's WhatsApp message becomes a filled order, and the mill's purchase order goes out as a PDF by e-mail.</li>
+            <h3>Software Developer, in-house<span class="at">Kraft-paper trading firm · Mumbai</span></h3>
+            <p>I design, build and run the software the business works on, used every day by staff in a Mumbai and a Gujarat office.</p>
+            <ul class="pts">
+              <li>Built the order system: a customer's WhatsApp message becomes a filled order, and the mill's purchase order goes out as a PDF.</li>
               <li>Automated Tally: a mill's bill becomes a purchase and its matching sales bill in one click, with GST, TDS and stock lines.</li>
-              <li>Wrote the engine that reads mill invoices from e-mail and fills them onto the right order. A reading is used only when it adds up to the bill's printed totals.</li>
-              <li>Built the collections side: a due list by each party's payment terms, statements of each party's own bills, and payment advices e-mailed straight from Tally.</li>
-              <li>Run it all on the firm's own server, with hourly off-site backups and a test suite that runs before every change.</li>
+              <li>Wrote the engine that reads mill invoices from e-mail and fills them onto the right order, checked against each bill's printed totals.</li>
+              <li>Built collections: a due list by payment terms, party statements, and payment advices e-mailed straight from Tally.</li>
+              <li>Run it on the firm's own server, with hourly off-site backups and a test suite before every change.</li>
             </ul>
-            <ul class="tags" aria-label="Tools used">
-              <li>Python</li><li>Django</li><li>TallyPrime XML</li><li>TDL</li><li>SQLite</li><li>Linux</li><li>Local LLMs</li><li>OCR</li>
-            </ul>
+            <ul class="tags"><li>Python</li><li>Django</li><li>TallyPrime XML</li><li>TDL</li><li>SQLite</li><li>Local LLMs</li></ul>
           </div>
         </li>
         <li class="job">
           <p class="when">2026 — Now</p>
           <div>
-            <h3>Freelance Developer<span class="at">Self-employed, Mumbai</span></h3>
-            <p>Websites and tools for small businesses, from the first sketch to hosting and later changes: a craft-workshop studio, an agri exporter, a recruitment agency and a wellness brand.</p>
-            <ul class="tags" aria-label="Tools used">
-              <li>Django</li><li>Flask</li><li>JavaScript</li><li>HTML and CSS</li><li>Shopify</li>
-            </ul>
+            <h3>Freelance Developer<span class="at">Self-employed · Mumbai</span></h3>
+            <p>Websites and tools for a craft-workshop studio, an agri exporter, a recruitment agency and a wellness brand.</p>
+            <ul class="tags"><li>Django</li><li>Flask</li><li>JavaScript</li><li>Shopify</li></ul>
           </div>
         </li>
         <li class="job">
           <p class="when">2024 — 2027</p>
           <div>
-            <h3>BSc Information Technology<span class="at">Wilson College, Chowpatty, Mumbai</span></h3>
+            <h3>BSc Information Technology<span class="at">Wilson College · Chowpatty, Mumbai</span></h3>
           </div>
         </li>
         <li class="job">
@@ -371,188 +597,87 @@ a{color:inherit}
           </div>
         </li>
       </ol>
-    </section>
+    </div>
+  </section>
 
-    <section class="sec" id="projects">
-      <h2>Projects</h2>
-
-      <article class="feature">
-        <div class="feature-head">
-          <p class="label">Main project · in daily use</p>
-          <h3>Order-to-Tally system for a paper trader</h3>
-          <p>One system takes a paper order from the customer's message to the mill, reads the mill's bill when it arrives, books both sides in Tally and tracks the payment.</p>
-        </div>
-        <div class="feature-body">
-          <div class="run" aria-label="Example run with demo data: one mill bill going through the system">
-            <div class="run-top"><span class="label">One mill bill · demo data</span><button class="pause" type="button" id="pause" aria-pressed="false">Pause</button></div>
-            <ol class="steps" id="steps">
-              <li class="step done"><span class="t">09:31</span><span><b>Mail picked up</b><small>Invoice and reel list, 2 PDFs</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></li>
-              <li class="step done"><span class="t">09:31</span><span><b>Bill read</b><small>12 reels · 4 sizes · 10,181 kg</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></li>
-              <li class="step done"><span class="t">09:31</span><span><b>Totals checked</b><small>Reels add up to the printed total</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></li>
-              <li class="step done"><span class="t">09:32</span><span><b>Filled on the order</b><small>PO 105 · 4 of 4 sizes</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></li>
-              <li class="step done"><span class="t">09:33</span><span><b>Booked in Tally</b><small>Purchase and its sales bill</small></span><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 6.2 4.8 9 10 3"/></svg></span></li>
-            </ol>
-          </div>
-          <dl class="does">
-            <div><dt>Orders</dt><dd>Paste the customer's message; sizes, GSM and grades fill the form for staff to check.</dd></div>
-            <div><dt>Mill bills</dt><dd>Read from e-mail and filled onto the right order, scanned copies included.</dd></div>
-            <div><dt>Tally</dt><dd>Purchase and sales bills booked by an office agent, with GST and TDS.</dd></div>
-            <div><dt>Collections</dt><dd>A due list by payment terms, party statements, and payment advices e-mailed from Tally.</dd></div>
-            <div><dt>Upkeep</dt><dd>Own server, hourly backups, 3,500+ tests before every change.</dd></div>
-          </dl>
-        </div>
-        <div class="feature-foot">
-          <ul class="tags" aria-label="Built with"><li>Django</li><li>TallyPrime</li><li>TDL add-ons</li><li>Gmail API</li><li>Cloudflare Tunnel</li></ul>
-        </div>
-      </article>
-
-      <div class="cards">
-        <article class="card">
-          <div class="reader" aria-label="A mill bill as the matching engine reads it, demo data">
-            <div class="r hd"><span>Size</span><span>Grade</span><span>Reels</span><span>GSM</span><span>Kg</span></div>
-            <div class="r"><span>27.00"</span><span>22 BF</span><span>2</span><span>180</span><span>787</span></div>
-            <div class="r"><span>30.25"</span><span>22 BF</span><span>1</span><span>180</span><span>482</span></div>
-            <div class="r"><span>34.00"</span><span>20 BF</span><span>3</span><span>140</span><span>1,343</span></div>
-            <div class="r"><span>46.00"</span><span>18 BF</span><span>1</span><span>120</span><span>626</span></div>
-            <div class="r tot"><span>Total</span><span></span><span>7</span><span></span><span>3,238</span></div>
-            <p class="ok">Matches the printed 3,238 kg</p>
-          </div>
-          <div class="txt">
-            <p class="kind">Engine · Python</p>
-            <h3>Invoice matching engine</h3>
-            <p>Reads bills from 30+ paper mills in any layout and fills them onto orders by GSTIN, PO and size. Before launch it re-read every bill since June and made no wrong fill.</p>
-            <ul class="tags"><li>Python</li><li>PDF parsing</li><li>Tesseract OCR</li><li>Ollama</li></ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot"><img src="img/demo_due_statement.jpg" alt="A payment-due statement listing bills past their payment day and bills not yet due, with demo data" width="820" height="548" loading="lazy"></div>
-          <div class="txt">
-            <p class="kind">Feature · Django</p>
-            <h3>Payment collections</h3>
-            <p>A due list that follows each party's own payment terms, and a one-page statement of only that party's bills, ready to send.</p>
-            <ul class="tags"><li>Django</li><li>Tally data</li><li>PDF</li></ul>
-          </div>
-        </article>
-
-        <a class="card" href="https://gocreativebyiqra.com" target="_blank" rel="noopener">
-          <div class="shot"><img src="img/gocreative.jpg" alt="Go Creative events page with a bookable surfing experience" width="1200" height="750" loading="lazy"></div>
-          <div class="txt">
-            <p class="kind">Client · Website</p>
-            <h3>Go Creative <span class="arrow" aria-hidden="true">↗</span></h3>
-            <p>A craft-workshop studio. Every event the owner adds goes live with booking and payment.</p>
-            <p class="go">gocreativebyiqra.com</p>
-          </div>
-        </a>
-
-        <article class="card">
-          <div class="shot"><img src="img/alarfan.jpg" alt="Al Arfan Global Exports home page" width="1200" height="750" loading="lazy"></div>
-          <div class="txt">
-            <p class="kind">Client · Website</p>
-            <h3>Al Arfan Global Exports</h3>
-            <p>An agri exporter to the Gulf. The site runs in ten languages, and the owner edits any text with one click.</p>
-            <ul class="tags"><li>Django</li><li>10 languages</li></ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot"><img src="img/imshub.jpg" alt="IMS Hub turning a typed job order into hiring posters" width="1200" height="750" loading="lazy"></div>
-          <div class="txt">
-            <p class="kind">Client · Tool</p>
-            <h3>IMS Hub</h3>
-            <p>For a recruitment agency. A typed job order comes back as ready hiring posters, with a searchable CV database behind it.</p>
-            <ul class="tags"><li>Flask</li><li>Local AI models</li></ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot"><img src="img/dailykalonji.jpg" alt="Daily Kalonji landing page with the oil bottle" width="1200" height="750" loading="lazy"></div>
-          <div class="txt">
-            <p class="kind">Client · Landing page</p>
-            <h3>Daily Kalonji</h3>
-            <p>A black seed oil brand's landing page that sends buyers to its existing store.</p>
-            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          </div>
-        </article>
+  <section class="sec" id="tools">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Toolbox</p>
+        <h2>What I build with.</h2>
       </div>
-
-      <div class="bots">
-        <div class="bot"><h3>RozgarBot</h3><p>A WhatsApp job bot that sends job-seekers only the jobs they asked for, and goes quiet when a person replies.</p><span class="live"><span class="dot" aria-hidden="true"></span>Running</span></div>
-        <div class="bot"><h3>Sales reminders</h3><p>Sends each salesperson the customers to call that morning, until Tally shows the month's target met.</p><span class="live"><span class="dot" aria-hidden="true"></span>Running</span></div>
-        <div class="bot"><h3>Office assistant</h3><p>Runs on a local AI model on the firm's own server and sends the follow-ups agreed in meetings.</p><span class="live"><span class="dot" aria-hidden="true"></span>Running</span></div>
+      <div class="tools">
+        <div class="tool"><h3>Languages</h3><ul><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML and CSS</li></ul></div>
+        <div class="tool"><h3>Frameworks</h3><ul><li>Django</li><li>Flask</li><li>FastAPI</li><li>Shopify</li></ul></div>
+        <div class="tool"><h3>Data</h3><ul><li>SQLite, MySQL</li><li>TallyPrime XML</li><li>TDL add-ons</li><li>PDF and Excel</li></ul></div>
+        <div class="tool"><h3>AI</h3><ul><li>Claude, OpenAI APIs</li><li>Ollama, local models</li><li>Tesseract OCR</li></ul></div>
+        <div class="tool"><h3>Running it</h3><ul><li>Linux servers</li><li>Cloudflare Tunnel</li><li>Git, backups</li><li>Automated tests</li></ul></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="sec" id="skills">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <div><dt>Languages</dt><dd>Python, JavaScript, SQL, HTML and CSS</dd></div>
-        <div><dt>Frameworks</dt><dd>Django, Flask, FastAPI, Shopify</dd></div>
-        <div><dt>Data</dt><dd>SQLite, MySQL, Tally XML and TDL, PDF and Excel reports</dd></div>
-        <div><dt>AI</dt><dd>Claude and OpenAI APIs, local models with Ollama, OCR</dd></div>
-        <div><dt>Running it</dt><dd>Linux servers, Cloudflare Tunnel, backups, Git, automated tests</dd></div>
-      </dl>
-    </section>
-
-    <section class="sec contact" id="contact">
-      <h2>Contact</h2>
-      <p class="ask">Have a job your team still does <em>by hand?</em></p>
-      <p class="prose">Tell me what it is. I'm open to internships, full-time roles and freelance projects.</p>
-      <div>
-        <div class="mailrow"><span class="mail" id="mail-b">farhanmalkani222@gmail.com</span><button class="copy" type="button" id="copy-b" data-target="mail-b" data-out="out-b">Copy</button><a class="copy" href="Farhan_Malkani_Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none">Resume PDF</a></div>
-        <p class="copied" id="out-b" aria-live="polite"></p>
+  <section class="sec" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <p class="eyebrow">Contact</p>
+        <h2 style="margin-top:14px">Have a job your team still does <span class="grad">by hand?</span></h2>
+        <p>Tell me what it is. I'm open to internships, full-time roles and freelance projects.</p>
+        <div class="mailbox">
+          <span class="mail" id="mail">farhanmalkani222@gmail.com</span>
+          <button class="btn primary sm" type="button" id="copy">Copy e-mail</button>
+          <a class="btn ghost sm" href="https://github.com/farhanmalkani222-droid" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost sm" href="Farhan_Malkani_Resume.pdf" target="_blank" rel="noopener" data-site-only>Resume PDF</a>
+        </div>
+        <p class="copied" id="copied" aria-live="polite"></p>
       </div>
-      <footer class="foot"><span>Farhan Malkani · Mumbai</span><span>Work shown with demo data where it holds a client's private records.</span></footer>
-    </section>
-  </main>
-</div>
+    </div>
+    <div class="wrap"><footer class="foot"><span>Farhan Malkani · Mumbai · 2026</span><span>Client records are shown with demo data.</span></footer></div>
+  </section>
+</main>
 
 <script>
 (function(){
-  // copy buttons: write to the clipboard, else select the address for Ctrl+C
-  document.querySelectorAll(".copy").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      var el = document.getElementById(btn.dataset.target), out = document.getElementById(btn.dataset.out);
-      function pick(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); out.textContent = "Selected. Press Ctrl+C to copy."; }
-      try { navigator.clipboard.writeText(el.textContent.trim()).then(function(){ out.textContent = "Copied."; }, pick); } catch (e) { pick(); }
-    });
+  // nav: a hairline once the page moves
+  var nav = document.getElementById("nav");
+  function edge(){ nav.classList.toggle("scrolled", window.scrollY > 8); }
+  addEventListener("scroll", edge, {passive:true}); edge();
+
+  // copy e-mail
+  var copyBtn = document.getElementById("copy"), out = document.getElementById("copied"), mail = document.getElementById("mail");
+  copyBtn.addEventListener("click", function(){
+    function pick(){ var r = document.createRange(); r.selectNodeContents(mail); var s = getSelection(); s.removeAllRanges(); s.addRange(r); out.textContent = "Selected. Press Ctrl+C to copy."; }
+    try { navigator.clipboard.writeText(mail.textContent.trim()).then(function(){ out.textContent = "Copied."; copyBtn.textContent = "Copied"; setTimeout(function(){ copyBtn.textContent = "Copy e-mail"; }, 1800); }, pick); }
+    catch (e) { pick(); }
   });
 
-  // contents: mark the section being read
-  var links = Array.prototype.slice.call(document.querySelectorAll(".toc a"));
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if (!e.isIntersecting) return;
-        links.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id); });
-      });
-    }, {rootMargin: "-35% 0px -55% 0px"});
-    document.querySelectorAll(".sec").forEach(function(s){ io.observe(s); });
-  }
-
-  // the demo run: steps light one by one, rest finished; a pause button because it loops
-  var steps = Array.prototype.slice.call(document.querySelectorAll("#steps .step"));
+  // the hero demo: each message line lights, its row lands in the order, then the three steps tick
+  var lines = Array.prototype.slice.call(document.querySelectorAll("#bubble span"));
+  var rows = Array.prototype.slice.call(document.querySelectorAll(".tbl tr.row"));
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var total = document.getElementById("total");
+  var amounts = [3, 2, 4, 3];
+  function rupees(n){ return String(n); }   // the total counts rolls
   var btn = document.getElementById("pause");
-  var still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (still) { btn.hidden = true; return; }
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { btn.hidden = true; return; }
+
+  // timeline: line 0 (greeting), lines 1-4 -> rows 0-3, lines 5-6 (rates, delivery), chips 0-2, hold
+  var plan = [];
+  plan.push(function(){ reset(); });
+  plan.push(function(){ light(0); });
+  for (var k = 0; k < 4; k++) (function(k){ plan.push(function(){ light(k + 1); rows[k].classList.remove("hide"); total.textContent = rupees(amounts.slice(0, k + 1).reduce(function(a, b){ return a + b; }, 0)); }); })(k);
+  plan.push(function(){ light(5); }); plan.push(function(){ light(6); });
+  for (var c = 0; c < 3; c++) (function(c){ plan.push(function(){ light(-1); chips[c].classList.add("on"); }); })(c);
+  var delays = [700, 800, 900, 900, 900, 900, 800, 800, 800, 800, 3600];
   var i = 0, timer = null, paused = false;
-  function paint(){
-    steps.forEach(function(s, k){ s.classList.toggle("done", k < i); s.classList.toggle("now", k === i); });
-  }
-  function tick(){
-    i += 1;
-    if (i > steps.length) { i = 0; }
-    paint();
-    timer = setTimeout(tick, i === steps.length ? 3200 : 1100);
-  }
-  function start(){ i = 0; paint(); timer = setTimeout(tick, 900); }
+  function light(n){ lines.forEach(function(l, j){ l.classList.toggle("on", j === n); }); }
+  function reset(){ light(-1); rows.forEach(function(r){ r.classList.add("hide"); }); chips.forEach(function(ch){ ch.classList.remove("on"); }); total.textContent = rupees(0); }
+  function tick(){ plan[i](); var d = delays[i] || 700; i = (i + 1) % plan.length; timer = setTimeout(tick, d); }
   btn.addEventListener("click", function(){
-    paused = !paused;
-    btn.setAttribute("aria-pressed", String(paused));
-    btn.textContent = paused ? "Play" : "Pause";
-    if (paused) { clearTimeout(timer); i = steps.length; paint(); } else { start(); }
+    paused = !paused; btn.setAttribute("aria-pressed", String(paused)); btn.textContent = paused ? "Play" : "Pause";
+    if (paused) { clearTimeout(timer); light(-1); rows.forEach(function(r){ r.classList.remove("hide"); }); chips.forEach(function(ch){ ch.classList.add("on"); }); total.textContent = rupees(12); }
+    else { i = 0; tick(); }
   });
-  start();
+  timer = setTimeout(tick, 1400);
 })();
 </script>
 
